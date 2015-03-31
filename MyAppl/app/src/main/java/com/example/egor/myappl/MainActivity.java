@@ -24,6 +24,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mTranslateButton = (Button) findViewById(R.id.translate_button);
+        mTranslatedText = (TextView) findViewById(R.id.hello);
+        mTranslateButton.setOnClickListener(this);
     }
 
 
@@ -49,20 +52,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
         return super.onOptionsItemSelected(item);
     }
 
-    public void onViewCreated(View view, Bundle savedInstanceState) {
-        mTranslateButton = (Button) view.findViewById(R.id.translate_button);
-        mTranslatedText = (TextView)view.findViewById(R.id.hello);
-        mTranslateButton.setOnClickListener(this);
-
-
-    }
-
-
     public void onClick(View v) {
-        System.out.println("fasfasf");
         if(v == mTranslateButton) {
-           // mTranslatedText.setText("213");
-            System.out.println("fasfasf");
+           mTranslatedText.setText("213");
         }
 
     }
